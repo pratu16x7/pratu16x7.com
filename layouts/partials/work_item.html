@@ -1,0 +1,24 @@
+<small>{{ dateFormat "Jan 2, 2006" .Date }}</small>
+<hgroup>
+    {{ $link := "" }}
+    {{ if .Params.github }}
+        {{ $link = delimit (slice "https://www.github.com/" .Params.github) "" }}
+    {{ else if .Params.compositionFile }}
+        {{ $link = delimit (slice .RelPermalink .Params.compositionFile) "" }}
+    {{ else }}
+        {{ $link = .RelPermalink }}
+    {{ end }}
+    
+    <h2><a href="{{$link}}">{{.Title}}</a></h2>
+    <h3>{{.Params.subtitle}}</h3>
+</hgroup>
+{{ if .Params.thumbnail }}
+    {{ if .Resources.GetMatch .Params.thumbnail }}
+        {{ $thumbnail := .Resources.GetMatch .Params.thumbnail }}
+        <p><img src="{{ $thumbnail.Permalink }}"></p>
+    {{- end -}}
+{{- end -}}
+<p>
+    {{.Summary}}
+</p>
+

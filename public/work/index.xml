@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Work on Prateeksha Singh</title>
+    <link>http://pratu16x7.com/work/</link>
+    <description>Recent content in Work on Prateeksha Singh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 02 Jan 2021 15:25:51 +0530</lastBuildDate><atom:link href="http://pratu16x7.com/work/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Solving Polyomino Packing</title>
+      <link>http://pratu16x7.com/work/solving-polyomino-packing/</link>
+      <pubDate>Wed, 20 Nov 2019 12:00:00 +0530</pubDate>
+      
+      <guid>http://pratu16x7.com/work/solving-polyomino-packing/</guid>
+      <description>An way to solve the Kaleidoscope Classic, a polynomino packing puzzle with an 8x8 board and 18 checkered pieces, that can be arranged in over billlions of ways, and any single pattern formed can have anywhere from millions to a single solution. Given a pattern, a solution is an arrangement of the pieces, flipped or otherwise, that form the pattern.</description>
+    </item>
+    
+    <item>
+      <title>Charting for the Modern Web</title>
+      <link>http://pratu16x7.com/work/charting-for-the-modern-web/</link>
+      <pubDate>Fri, 02 Aug 2019 11:22:37 +0530</pubDate>
+      
+      <guid>http://pratu16x7.com/work/charting-for-the-modern-web/</guid>
+      <description>The Frappe Charts talk presented at RedHat Devconf ‘19 and JsFoo Pune ‘19, expanding on implementation details and the open source journey.</description>
+    </item>
+    
+    <item>
+      <title>Automating Motivation Driven Learning</title>
+      <link>http://pratu16x7.com/work/automating-motivation-driven-learning/</link>
+      <pubDate>Tue, 07 May 2019 12:00:00 +0530</pubDate>
+      
+      <guid>http://pratu16x7.com/work/automating-motivation-driven-learning/</guid>
+      <description>An approach to automate stimulating the right thoughts to inculcate independent learning and spark self-interest thorough projects.</description>
+    </item>
+    
+    <item>
+      <title>Erpnext Desk V2</title>
+      <link>http://pratu16x7.com/work/erpnext-desk-v2/</link>
+      <pubDate>Thu, 07 Feb 2019 12:00:00 +0530</pubDate>
+      
+      <guid>http://pratu16x7.com/work/erpnext-desk-v2/</guid>
+      <description>Transforming the original iconic ERPNext desk to be a more complete bird’s eye view of everything the full-open source ERP system has to offer, all it’s modules and places therein. Also features a gamified dependency tracking: the places and documents that require another prior activation of some other document(s) are notified to user on access.</description>
+    </item>
+    
+    <item>
+      <title>Marketplace Module</title>
+      <link>http://pratu16x7.com/work/marketplace-module/</link>
+      <pubDate>Thu, 30 Aug 2018 12:00:00 +0530</pubDate>
+      
+      <guid>http://pratu16x7.com/work/marketplace-module/</guid>
+      <description>An in-app interface to ERPNext where existing users can publish their inventory items and discovery others. The items are synced with a central marketplace server, setup as a Frappe instance. The in-app interface itself is dynamic, allowing users to browse items from the server by categories, check details, and message other users for more information.</description>
+    </item>
+    
+    <item>
+      <title>Erpnext Setup</title>
+      <link>http://pratu16x7.com/work/erpnext-setup/</link>
+      <pubDate>Thu, 21 Dec 2017 15:12:00 +0530</pubDate>
+      
+      <guid>http://pratu16x7.com/work/erpnext-setup/</guid>
+      <description>This was a general rewrite to forgo the legacy 9-step Setup Wizard that the first-time users would have to go through even before getting a glimpse of what their newly registered instance looked like. The first stage required only basic personal configuration, setting up with bootstrapped data to initialise the desk. The second would appear as an optional-but-essential wizard once inside, to enable users to import their own data, and guide them through a preliminary accounting flow.</description>
+    </item>
+    
+    <item>
+      <title>Global Search (Frappe)</title>
+      <link>http://pratu16x7.com/work/global-search/</link>
+      <pubDate>Mon, 13 Feb 2017 12:00:00 +0530</pubDate>
+      
+      <guid>http://pratu16x7.com/work/global-search/</guid>
+      <description>MySQL based full text search for Frappe’s Awesome bar, in order to allow searching documents not just by name, but content and metadata, with the search fields customisable for different document types.</description>
+    </item>
+    
+    <item>
+      <title>Ar Piano</title>
+      <link>http://pratu16x7.com/work/ar-piano/</link>
+      <pubDate>Fri, 15 Apr 2016 12:00:00 +0530</pubDate>
+      
+      <guid>http://pratu16x7.com/work/ar-piano/</guid>
+      <description>IJEA 2016 Vol 6 Issue 3 A gesture-controlled portable AR piano, using a webcam and a paper template placed in front of it, which can be played, with accurate separation of strokes at normal playing speeds.</description>
+    </item>
+    
+    <item>
+      <title>3d Printing</title>
+      <link>http://pratu16x7.com/work/3d-printing/</link>
+      <pubDate>Tue, 02 Sep 2014 11:23:28 +0530</pubDate>
+      
+      <guid>http://pratu16x7.com/work/3d-printing/</guid>
+      <description>A presentation detailing why it is the best thing since sliced bread.</description>
+    </item>
+    
+  </channel>
+</rss>

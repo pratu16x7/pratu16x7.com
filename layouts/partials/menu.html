@@ -1,0 +1,22 @@
+<!-- sidebar start -->
+<header>
+    <img src="/images/timon_minimal.svg" class="logo min-width-logo">
+    <nav>
+        <ul>
+            {{ $currentPage := . }}
+            {{ $menu := .Site.Menus.main }}
+            {{ $midpoint := div (len $menu) 2 }}
+            {{ range $index, $element := $menu }}
+                {{ if eq $index $midpoint }}
+                    <li class="max-width-logo">
+                        <img src="/images/timon_minimal.svg" class="logo">
+                    </li>
+                {{ end }}
+                <li class="{{if ($currentPage.IsMenuCurrent "main" .) }} active{{ end }}">
+                    <a href="{{ .URL }}" title="{{ .Title }}"><span>{{ .Name }}</span></a>
+                </li>
+            {{ end }}
+            <!-- yeh can just add links hardcoded here as well -->
+        </ul>
+    </nav>
+</header>

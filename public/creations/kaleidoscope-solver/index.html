@@ -1,0 +1,140 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Kaleidoscope Solver</title>
+        
+        
+        <link rel="stylesheet" href="/sass/main.min.63ba10e1e37b242c9329126bc7151844317a83c4575a9e5c68204b18ec2b0c10.css">
+        <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
+        <meta property="og:title" content="Kaleidoscope Solver" />
+<meta property="og:description" content="Solver for the Kaleidoscope pattern packing puzzle in Python" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://pratu16x7.com/creations/kaleidoscope-solver/" /><meta property="og:image" content="http://pratu16x7.com/images/timon_minimal.png"/><meta property="article:section" content="creations" />
+<meta property="article:published_time" content="2019-11-11T12:00:00+05:30" />
+<meta property="article:modified_time" content="2019-11-11T12:00:00+05:30" /><meta property="og:site_name" content="Prateeksha&#39;s Webplace" />
+
+
+        
+        
+        <meta property="og:image" content="/images/timon_minimal.png"/>
+        <meta property="og:image:secure_url" content="http://pratu16x7.com/images/timon_minimal.png"/>
+        
+        
+    </head>
+    <body>
+        
+<header>
+    <img src="/images/timon_minimal.svg" class="logo min-width-logo">
+    <nav>
+        <ul>
+            
+            
+            
+            
+                
+                <li class="">
+                    <a href="/" title=""><span>About me</span></a>
+                </li>
+            
+                
+                <li class="">
+                    <a href="/stories/" title=""><span>Stories</span></a>
+                </li>
+            
+                
+                    <li class="max-width-logo">
+                        <img src="/images/timon_minimal.svg" class="logo">
+                    </li>
+                
+                <li class="">
+                    <a href="/creations/" title=""><span>Creations</span></a>
+                </li>
+            
+                
+                <li class="">
+                    <a href="/work/" title=""><span>Work</span></a>
+                </li>
+            
+            
+        </ul>
+    </nav>
+</header>
+
+        
+        
+
+<article class="paper brown">
+    <img src="12_pattern_steps.png">
+
+    <hgroup>
+        <h1>Kaleidoscope Solver</h1>
+        <h3></h3>
+    </hgroup>
+
+    <div style="color:grey; font-size:16px;">Monday, Nov 11, 2019</div>
+    <div style="color:grey; font-size:16px;"></div>
+
+
+    <div><p>This is an attempt to make a basic solver for the Kaleidoscope Classic, a polynomino packing puzzle with an 8x8 board and 18 checkered pieces, that can be arranged in over billlions of ways.</p>
+<p>Any single pattern formed can have anywhere from millions to a single solution. Given a specific pattern, a solution is an arrangement of the pieces, flipped or otherwise, that form the pattern.</p>
+<p><img src="kaleidoscope_puzzle.png" alt="kaleidoscope_puzzle"></p>
+<p>The algorithm makes use of finding islands, edge matching, piece size and crookedness heuristics and backtracking to find the best fitting pieces.</p>
+<h2 id="solver-runs-for-a-few-patterns">Solver runs for a few patterns</h2>
+<h3 id="the-car-reflection">The Car Reflection</h3>
+<img src="car_pattern.png" style="
+    margin: 0 auto;
+    margin-top: 1em;
+    width: 20%;
+">
+<p><img src="car_pattern_steps.png" alt="car_pattern_steps"></p>
+<p><img src="car_pattern_solution.png" alt="car_pattern_solution"></p>
+<h3 id="the-number-12">The Number 12</h3>
+<img src="12_pattern.png" style="
+    margin: 0 auto;
+    margin-top: 1em;
+    width: 20%;
+">
+<p><img src="12_pattern_breakdown.png" alt="12_pattern_breakdown"></p>
+<p><img src="12_pattern_steps.png" alt="12_pattern_steps"></p>
+<h3 id="no-single-squares">No single squares</h3>
+<img src="no_single_squares_pattern.png" style="
+    margin: 0 auto;
+    margin-top: 1em;
+    width: 20%;
+">
+<p><img src="no_single_squares_pattern_breakdown.png" alt="no_single_squares_pattern_breakdown"></p>
+<p><img src="no_single_squares_pattern_steps.png" alt="no_single_squares_pattern_steps"></p>
+<img src="69643268-1eb58d00-1089-11ea-972e-4f88b97108a3.png" style="
+    margin: 0 auto;
+    margin-top: 1em;
+    width: 20%;
+">
+<h2 id="algorithm">Algorithm</h2>
+<p>Try a set of moves until the board has no remaing holes and no remaining pieces, or no moves.</p>
+<p>Preprocess:</p>
+<ol>
+<li>Define teritory (Separate holes) by adjacent same color cell edges.</li>
+<li>[unquestionable] Check if any holes have single-piece solution, and place them</li>
+<li>see if the magic wand (octomino) fits any of the holes (practically done in the first step)</li>
+</ol>
+<p>While pieces remaining:</p>
+<ol>
+<li>Make a size progression for each hole by cell count, wrt available pieces.</li>
+<li>Look for the densest windows across holes. Rank by edge/cell density.</li>
+<li>Fit pieces to each hole,  rank each window-hole combination by
+a. edges matched
+b. crookedness hueristic of pieces
+c. span (only small_wand, or in rare cases magic wand)</li>
+<li>Select the winner piece, but keep a set of other next best moves</li>
+<li>If no moves:
+a. Try a different sized piece, according to a different progression
+b. If still no moves, backtrack to parent and try its sibling.</li>
+</ol>
+<p>Performance is still a bit choppy for highly checkered patterns, which can be solved with more robust pruning in the backtracking tree.</p>
+<p>Can be upgraded into a playable web-app :)</p></div>
+</article>
+
+        
+        <footer>© Prateeksha Singh 2020</footer>
+    </body>
+</html>

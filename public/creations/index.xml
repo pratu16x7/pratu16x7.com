@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Creations on Prateeksha Singh</title>
+    <link>http://pratu16x7.com/creations/</link>
+    <description>Recent content in Creations on Prateeksha Singh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 12 Dec 2020 16:23:13 +0530</lastBuildDate><atom:link href="http://pratu16x7.com/creations/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hogwarts v2</title>
+      <link>http://pratu16x7.com/creations/hogwarts-v2/</link>
+      <pubDate>Sat, 26 Jun 2021 15:51:45 +0530</pubDate>
+      
+      <guid>http://pratu16x7.com/creations/hogwarts-v2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kaleidoscope Solver</title>
+      <link>http://pratu16x7.com/creations/kaleidoscope-solver/</link>
+      <pubDate>Mon, 11 Nov 2019 12:00:00 +0530</pubDate>
+      
+      <guid>http://pratu16x7.com/creations/kaleidoscope-solver/</guid>
+      <description>&lt;p&gt;This is an attempt to make a basic solver for the Kaleidoscope Classic, a polynomino packing puzzle with an 8x8 board and 18 checkered pieces, that can be arranged in over billlions of ways.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Elvish Lamp</title>
+      <link>http://pratu16x7.com/creations/elvish-lamp/</link>
+      <pubDate>Sat, 10 Nov 2018 17:40:19 +0530</pubDate>
+      
+      <guid>http://pratu16x7.com/creations/elvish-lamp/</guid>
+      <description>&lt;img src=&#34;http://pratu16x7.com/creations/elvish-lamp/elvish_lamp.jpg&#34; style=&#34;
+    margin: 0 auto;
+    margin-top: 1em;
+    width: 80%;
+&#34;&gt;
+&lt;p&gt;A mockery of the lost arts of the residents of &lt;a href=&#34;http://tolkiengateway.net/wiki/Eregion&#34;&gt;Eregion&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Pacman Console</title>
+      <link>http://pratu16x7.com/creations/pacman-console/</link>
+      <pubDate>Mon, 10 Sep 2018 12:00:00 +0530</pubDate>
+      
+      <guid>http://pratu16x7.com/creations/pacman-console/</guid>
+      <description>&lt;p&gt;A console Pacman game in Python&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Frappe Charts</title>
+      <link>http://pratu16x7.com/creations/frappe-charts/</link>
+      <pubDate>Tue, 31 Oct 2017 12:00:00 +0530</pubDate>
+      
+      <guid>http://pratu16x7.com/creations/frappe-charts/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://frappe.io/charts&#34;&gt;&lt;strong&gt;Charts Homepage ➜&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A GitHub-inspired SVG charting library for the web written in  JavaScript. Something I made it while working on analytics for ERPNext in  the Frappe framework. My most popular work yet.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hogwarts Castle</title>
+      <link>http://pratu16x7.com/creations/hogwarts-v1/</link>
+      <pubDate>Thu, 03 Mar 2016 17:40:13 +0530</pubDate>
+      
+      <guid>http://pratu16x7.com/creations/hogwarts-v1/</guid>
+      <description>&lt;p&gt;A fully-detailed, pop-up, light-up miniature of the magical school.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Face Tracker</title>
+      <link>http://pratu16x7.com/creations/face-tracker/</link>
+      <pubDate>Mon, 23 Feb 2015 12:00:00 +0530</pubDate>
+      
+      <guid>http://pratu16x7.com/creations/face-tracker/</guid>
+      <description>A program interfacing OpenCV (C++) and an Arduino microcontroller, that identifies a moving object and tracks it.</description>
+    </item>
+    
+    <item>
+      <title>Zeal 2015 Website</title>
+      <link>http://pratu16x7.com/creations/zeal-2015-website/</link>
+      <pubDate>Mon, 23 Feb 2015 12:00:00 +0530</pubDate>
+      
+      <guid>http://pratu16x7.com/creations/zeal-2015-website/</guid>
+      <description>&lt;p&gt;My first website. Made for VCET College.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Midnight Magic</title>
+      <link>http://pratu16x7.com/creations/midnight-magic/</link>
+      <pubDate>Thu, 01 Mar 2007 12:00:00 +0530</pubDate>
+      
+      <guid>http://pratu16x7.com/creations/midnight-magic/</guid>
+      <description>&lt;p&gt;My very first digital art, made in Gimp.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

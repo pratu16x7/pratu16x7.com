@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{.Title}}</title>
+        {{ $style := resources.Get "/sass/main.scss" | toCSS | minify | fingerprint }}
+        <!-- using Permalink (absolute path) here will cause the Mixed content error and fail to load -->
+        <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+        <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
+        {{ template "_internal/opengraph.html" . }}
+        
+        {{ if .Params.og_image }}
+        <meta property="og:image" content="{{ .Params.og_image | relURL }}"/>
+        <meta property="og:image:secure_url" content="{{ .Params.og_image | absURL }}"/>
+        {{ else }}
+        <meta property="og:image" content="{{ .Site.Params.og_image | relURL }}"/>
+        <meta property="og:image:secure_url" content="{{ .Site.Params.og_image | absURL }}"/>
+        {{ end }}
+        
+    </head>
+    <body>
+        {{ partial "menu" . }}
+        
+        {{ block "main" . }}
+        {{ end }}
+        
+        <footer>© Prateeksha Singh 2020</footer>
+    </body>
+</html>

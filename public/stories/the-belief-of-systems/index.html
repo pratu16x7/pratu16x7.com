@@ -1,0 +1,235 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>The Belief of a Search System</title>
+        
+        
+        <link rel="stylesheet" href="/sass/main.min.63ba10e1e37b242c9329126bc7151844317a83c4575a9e5c68204b18ec2b0c10.css">
+        <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
+        <meta property="og:title" content="The Belief of a Search System" />
+<meta property="og:description" content="Some thoughts/aids/ideas that helped me understand some of the concepts like fundamental to so many things in Information Retrieval, as well as other areas." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://pratu16x7.com/stories/the-belief-of-systems/" /><meta property="og:image" content="http://pratu16x7.com/images/timon_minimal.png"/><meta property="article:section" content="stories" />
+<meta property="article:published_time" content="2022-01-16T16:44:12+05:30" />
+<meta property="article:modified_time" content="2022-01-16T16:44:12+05:30" /><meta property="og:site_name" content="Prateeksha&#39;s Webplace" />
+
+
+        
+        
+        <meta property="og:image" content="/images/timon_minimal.png"/>
+        <meta property="og:image:secure_url" content="http://pratu16x7.com/images/timon_minimal.png"/>
+        
+        
+    </head>
+    <body>
+        
+<header>
+    <img src="/images/timon_minimal.svg" class="logo min-width-logo">
+    <nav>
+        <ul>
+            
+            
+            
+            
+                
+                <li class="">
+                    <a href="/" title=""><span>About me</span></a>
+                </li>
+            
+                
+                <li class="">
+                    <a href="/stories/" title=""><span>Stories</span></a>
+                </li>
+            
+                
+                    <li class="max-width-logo">
+                        <img src="/images/timon_minimal.svg" class="logo">
+                    </li>
+                
+                <li class="">
+                    <a href="/creations/" title=""><span>Creations</span></a>
+                </li>
+            
+                
+                <li class="">
+                    <a href="/work/" title=""><span>Work</span></a>
+                </li>
+            
+            
+        </ul>
+    </nav>
+</header>
+
+        
+        
+
+<article class="paper red image-short">
+    
+
+    <hgroup>
+        <h1>The Belief of a Search System</h1>
+        <h3>… and doing the best despite uncertainties</h3>
+    </hgroup>
+
+    <div style="color:grey; font-size:16px;">Sunday, Jan 16, 2022</div>
+    <div style="color:grey; font-size:16px;"></div>
+
+
+    <div><p><em>Some thoughts/aids/ideas that helped me understand some of the concepts like fundamental to so many things in Information Retrieval, as well as other areas.</em></p>
+<p>So you&rsquo;re a Search System. Everything you know is comprised in a Library of Knowledge full of scrolls and docs</p>
+<p><img src="The%20World.png" alt="The World.png"></p>
+<p>and your job is to find and give Seekers what they need based on what they tell you.</p>
+<p><img src="The%20Truth.png" alt="The Truth.png"></p>
+<p>You have a knack for finding things, and for doing what you&rsquo;re told, so you imagine that for any <em>need of knowledge</em> that they might have, If your docs-world has the truth, in these docs, you&rsquo;ll find and guide them to the Truth and nothing else.</p>
+<p><img src="The%20Truth%20Retrieved.png" alt="The Truth Retrieved.png"></p>
+<p>In an ideal, rainbows-and-unicorns world.</p>
+<p>Unfortunately for you, there is an interface the user&rsquo;s need has to pass through before reaches you: which is <em>how well they can express their thoughts</em>.</p>
+<p>All you can get is a <em><strong>query</strong></em>, an rough idea, of what their need is. With that, you have to guess your best to divide your docs world into what you <em>think</em> is correct and not.</p>
+<p>And given how far off the query was from the need, your guess might be &hellip; well, a bit patchy.</p>
+<p><img src="The%20Guess.png" alt="The Guess.png"></p>
+<p><img src="The%20Guess%20Retrieved.png" alt="The Guess Retrieved.png"></p>
+<p>You decide to find at least know just how far off you really are, rather than leaving everything upto chance, so you can maybe find tricks to do better.</p>
+<h2 id="the-elusive-truth">The Elusive Truth</h2>
+<p>But just <em>how</em> far your guess is from the real deal? You notice three main areas</p>
+<ul>
+<li><strong>The Extra Part</strong>: in the guess, it has things added that <!-- raw HTML omitted -->should not<!-- raw HTML omitted --> have</li>
+</ul>
+<p><img src="The%20Extra%20Part.png" alt="The Extra Part.png"></p>
+<ul>
+<li><strong>The Missed Part</strong>: in the truth, which are things removed/not selected that <!-- raw HTML omitted -->should<!-- raw HTML omitted --> have</li>
+</ul>
+<p><img src="The%20Missed%20Part.png" alt="The Missed Part.png"></p>
+<p>And then of course,</p>
+<ul>
+<li><strong>The Correct Part</strong>: the one Both have, things that should have been added and are added, the correct/good part, where both are same &ndash;&gt; the green part.</li>
+</ul>
+<p><img src="The%20Correct%20Part.png" alt="The Correct Part.png"></p>
+<h2 id="the-dilemma">The Dilemma</h2>
+<p>There seem to be two ways to correct the error then. You don&rsquo;t have control on the real part, just on the guess. So, you can,</p>
+<ul>
+<li>
+<p>grow the guess: absorb more of the Missed</p>
+</li>
+<li>
+<p>reduce the guess: reduce some of the Extra</p>
+</li>
+</ul>
+<p>But this can&rsquo;t be done without a Seeker&rsquo;s help.</p>
+<p>So the next seeker that comes up to you and states his need, you give the docs and ask,</p>
+<p>You: &ldquo;Hey, so any thoughts about the results?&rdquo;</p>
+<p>Seeker: &ldquo;Yeah they&rsquo;re nice, though there are some wrong docs in here too.&rdquo;</p>
+<p>You: &ldquo;I can think of a way to imporve them maybe. Could you try to be more specific, and maybe remove some words?&rdquo;</p>
+<p><img src="The%20Guess%20No%20Extra%20(no%20text).png" alt="The  Guess No Extra (no text).png"></p>
+<p>Seeker: &ldquo;Yeah now <em>all</em> of these seem fine, there&rsquo;s no wrong ones, and looks like there are quite a few missing&rdquo;</p>
+<p><img src="The%20Guess%20No%20Extra.png" alt="The Guess No Extra.png"></p>
+<p>You: &ldquo;Well, what if you added more words and were more general?&rdquo;</p>
+<p><img src="The%20Guess%20Catching%20everything%20(no%20text).png" alt="The Guess Catching everything (no text).png"></p>
+<p>&ldquo;Yeah now there&rsquo;s everything I wanted, what are all these other things?&rdquo;</p>
+<p><img src="The%20Guess%20Catching%20Everything.png" alt="The Guess Catching Everything.png"></p>
+<p>Hmm.</p>
+<p>It seems there are two very different ways of <em>doing well</em>, each of which is good in one way, but bad in another.</p>
+<p>And, you realize, unless the <strong>initial offset</strong> between query and need is cured, or you&rsquo;re <em>very</em> lucky, you&rsquo;re never going to do well on both.</p>
+<h2 id="the-types-of-goodnesses">The Types of Goodnesses</h2>
+<p>So it seems you need to track both these cases of your searches.</p>
+<p>Two points strike you that might be good pointers:</p>
+<p><strong>Quantity</strong>: How well you were able to catch everything. It shows you <em>correct</em> things <em>removed</em> mistakenly.</p>
+<p>That would basically be <em>your catch</em> vs <em>everything correct</em>.</p>
+<p>That is, <strong>your correct guess ÷ truth</strong></p>
+<p><img src="Quantity.png" alt="Quantity.png"></p>
+<p>The other one is <strong>Quality</strong>: How well did you avoid being wrong. It shows <em>wrong</em> things <em>added</em> mistakenly.</p>
+<p>Which would be <em>your catch</em> vs <em>everything you got</em></p>
+<p>That is, <strong>your correct guess ÷ guess</strong></p>
+<p><img src="Quality.png" alt="Quality.png"></p>
+<p>Not bad. The only trouble now is that you&rsquo;re having some difficulty measuring all those areas.</p>
+<h2 id="finding-things-is-everywhere">&ldquo;Finding things&rdquo; is everywhere</h2>
+<p>To fix the squiggly shape area problem, you dumb it down removing unnecessary details, that makes it easier.</p>
+<p><img src="To%20Boxes.png" alt="To Boxes.png"></p>
+<p>Hang on. This looks familiar.</p>
+<p>It look just like something your friend, who is an <strong>Object Detection System</strong>, does.</p>
+<p><img src="Object%20Detection.png" alt="Object Detection.png"></p>
+<p>You&rsquo;re quite excited and show it to her. She&rsquo;s very interested, but then points out that it&rsquo;s actually not surprising, and in fact your measures are real and actually have names:</p>
+<ul>
+<li>
+<p>Measuring Quality is usually called <em><strong>Precision</strong></em>: So for her, how well her guess catches <em>only</em> the object.</p>
+</li>
+<li>
+<p>Measuring Quantity is on the other hand called <em><strong>Recall</strong></em>: How well her guess gets <em>all</em> of the object</p>
+</li>
+</ul>
+<p><img src="New%20Names.png" alt="New Names.png"></p>
+<p>What&rsquo;s more, there are even more names. The extra part, for example is called a <em>False Postive</em>. The missed part on the other hand is called a <em>False Negative</em>. And the correctly guessed part is called a <em>True Positive</em>.</p>
+<p><img src="FN%20TP%20FP.png" alt="FN TP FP.png"></p>
+<p>Woah, that&rsquo;s neat.</p>
+<p>You start to ask her how does <em>she</em> measure them, but them remember that she really just has all the box widths and pixel values which are pretty convenient.</p>
+<p>But your corpus and guesses do not have any apparent shape &hellip;</p>
+<p>&hellip; which actually might be a good thing. Maybe you don&rsquo;t even have to stop at this box shape.</p>
+<h2 id="the-proportions">The Proportions</h2>
+<p>You keep trying things out, and then something hits you.</p>
+<p>Maybe there&rsquo;s no real reason for the guess and real blobs to be in the middle. (And let&rsquo;s just increase the sizes so they&rsquo;re easier to work with)</p>
+<p><img src="The%20Transformation.png" alt="The Transformation.png"></p>
+<p>Ah, now everything is proportional to the big Docs Box. That should make measuring things a bit easier.</p>
+<p>So Precision and Recall would now look like,</p>
+<p><img src="Equivalence.png" alt="Equivalence.png"></p>
+<p>Working with proportions seems pretty convenient.</p>
+<p>Say if there are 10% true docs, then we don&rsquo;t have to know the actual number of docs.</p>
+<p><img src="Prior%2010%20percent.png" alt="Prior 10 percent.png"></p>
+<p>Also, you had heard somewhere that percents can be thought of as measuring the chance, or &ldquo;probability&rdquo;.</p>
+<p>So if you just got 1 doc from the entire store, it would have a 10% chance of being correct.</p>
+<p>To put in an another way, <strong>P(was true) = 10%</strong></p>
+<p>You decide to go even further. To see what happens when you guess.</p>
+<p>Say the Seeker gives you a query, and 70% of correct docs satify it, along with 5% of the incorrect ones.</p>
+<p><img src="Percents%20After%20Guess.png" alt="Percents After Guess.png"></p>
+<p>This means you know you got 70% of correct ones.</p>
+<p>It sounds very familiar &hellip; wait isn&rsquo;t that just Recall?</p>
+<p>Also, 70% of correct ones is also just another way to say <em>the chance that a doc was guessed, given it was true (limiting ourself to just true docs), is 70%.</em></p>
+<p>That is, <strong>P(doc_was_got | doc_was_true) = 70%</strong></p>
+<p>Which means, all of these are equivalent:</p>
+<p><img src="Recall%20Calculation.png" alt="Recall Calculation.png"></p>
+<p>So we have had our Recall with just proportions or rather, probabilities.</p>
+<p>Can we do precision too in a similar way?</p>
+<h2 id="the-bayes-case">The Bayes Case</h2>
+<p><img src="Precision%20Box%20diag.png" alt="Precision Box diag.png"></p>
+<p>Precision looks like it is very similar. The correct docs (green part) are still in the focus, but here you compare it with respect to the <em><strong>guess</strong></em> (yellow) part rather than the true part.</p>
+<p>So looks like here Precision would also be a probability, but a flipped one; it would say: &ldquo;Given you got a doc, what is the chance it was true?&rdquo;,</p>
+<p>Which is <strong>P(doc_was_true | doc_was got)</strong></p>
+<p>But for that you need the areas of the green and yellow. Not a problem, you can find them with the percents you know.</p>
+<p><img src="Precision%20Components%20Areas.png" alt="Precision Components Areas.png"></p>
+<p>This means Precision is,</p>
+<p><img src="Precision%20Calculation.png" alt="Precision Calculation.png"></p>
+<p>Oh, but wait.</p>
+<p>We already know that the</p>
+<ul>
+<li>
+<p>10% is <strong>P(doc_was true_)</strong></p>
+</li>
+<li>
+<p>70% is <strong>P(doc_was_got | doc_was true)</strong></p>
+</li>
+</ul>
+<p>In the same way,</p>
+<ul>
+<li>
+<p>90% is <strong>P(doc_was_not_true)</strong></p>
+</li>
+<li>
+<p>2% is <strong>P(doc_was_got | doc_was_not_true)</strong></p>
+</li>
+</ul>
+<p>Also, that denominator is just the entire guess, which is <strong>P(doc_was_got)</strong></p>
+<p>And so, you find Precision to be,</p>
+<p><img src="Precision%20Probabilities.png" alt="Precision Probabilities.png"></p>
+<p>Woo! Can&rsquo;t wait to show this interpretation your friend, bet she hasn&rsquo;t seen this one before.</p>
+<p>&ndash;</p>
+<p>You slowly begin to realize that whatever are any of those docs, even if you don&rsquo;t know their exact count, just a rough ratio, or a chance how many they might be, you <em>still</em> have a way to know how good we&rsquo;ll be.</p>
+<p>Of course, everything still much upto chance. But something hits different.</p>
+<p>It&rsquo;s like you now know exactly just how much that chance is :)</p>
+<h2 id="credits">Credits</h2>
+<p><strong>Concepts</strong>: Information Retrieval (IR) by Chris Manning, Bayes Theorem by 3Blue1Brown</p>
+<p><strong>Style</strong>: Lauren Ipsum, Wait But Why, Vihart, Advent of Code, HPMoR</p>
+<p><strong>Based On</strong>: Precision and Recall as relevance measures in Search, and the Probabilistic approach to IR</p></div>
+</article>
+
+        
+        <footer>© Prateeksha Singh 2020</footer>
+    </body>
+</html>

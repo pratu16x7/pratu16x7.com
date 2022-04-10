@@ -1,0 +1,163 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>An Svg Charting Library From Scratch</title>
+        
+        
+        <link rel="stylesheet" href="/sass/main.min.63ba10e1e37b242c9329126bc7151844317a83c4575a9e5c68204b18ec2b0c10.css">
+        <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
+        <meta property="og:title" content="An Svg Charting Library From Scratch" />
+<meta property="og:description" content="We come across plenty of data scenarios for our ERPNext users. It all  began when we needed them to be able to track sales. It would be nice to  fit in a tiny sales history graph on the user company master of our  product, so we started looking for options." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://pratu16x7.com/stories/svg-charting-library-from-scratch/" /><meta property="og:image" content="http://pratu16x7.com/images/timon_minimal.png"/><meta property="article:section" content="stories" />
+<meta property="article:published_time" content="2017-11-11T12:00:00+05:30" />
+<meta property="article:modified_time" content="2017-11-11T12:00:00+05:30" /><meta property="og:site_name" content="Prateeksha&#39;s Webplace" />
+
+
+        
+        
+        <meta property="og:image" content="/images/timon_minimal.png"/>
+        <meta property="og:image:secure_url" content="http://pratu16x7.com/images/timon_minimal.png"/>
+        
+        
+    </head>
+    <body>
+        
+<header>
+    <img src="/images/timon_minimal.svg" class="logo min-width-logo">
+    <nav>
+        <ul>
+            
+            
+            
+            
+                
+                <li class="">
+                    <a href="/" title=""><span>About me</span></a>
+                </li>
+            
+                
+                <li class="">
+                    <a href="/stories/" title=""><span>Stories</span></a>
+                </li>
+            
+                
+                    <li class="max-width-logo">
+                        <img src="/images/timon_minimal.svg" class="logo">
+                    </li>
+                
+                <li class="">
+                    <a href="/creations/" title=""><span>Creations</span></a>
+                </li>
+            
+                
+                <li class="">
+                    <a href="/work/" title=""><span>Work</span></a>
+                </li>
+            
+            
+        </ul>
+    </nav>
+</header>
+
+        
+        
+
+<article class="paper yellow">
+    <img src="frappe_charts_demo.gif">
+
+    <hgroup>
+        <h1>An Svg Charting Library From Scratch</h1>
+        <h3>Building what we needed, reaching 450 on HackerNews</h3>
+    </hgroup>
+
+    <div style="color:grey; font-size:16px;">Saturday, Nov 11, 2017</div>
+    <div style="color:grey; font-size:16px;"></div>
+
+
+    <div><p>We come across plenty of data scenarios for our ERPNext users. It all  began when we needed them to be able to track sales. It would be nice to  fit in a tiny sales history graph on the user company master of our  product, so we started looking for options.</p>
+<p>At the time, we were already  using <a href="http://c3js.org/?source=post_page---------------------------">c3.js</a> for our report pages. However, it didn’t blend very well with our classic design:</p>
+<p><img src="2.png" alt="c3 line graphs for timeseries">
+<em>c3 line graphs for timeseries</em></p>
+<p>As  it were, there weren’t many simplistic JS libraries for a plain graph.  Style patterns are not impossible to override in an existing project,  but this cannot make up for the inherent choices in structure and  behaviour. So instead of configuring a large library to fit our needs,  we took the much straightforward way of designing our own. After all,  our wants were simple; a way to translate value pairs into relative  shapes or positions.</p>
+<h2 id="the-design">The design</h2>
+<p>I found the inspiration to come up with something close to home, right where our projects live. <a href="https://github.com/?source=post_page---------------------------">GitHub</a>  has it own suite of consistent graphs suited to whatever works best for  its use cases. Despite the assortment, something that immediately  strikes you about all of them is how bare the data points look:</p>
+<p><img src="3.png" alt="GitHub commit count history graph">
+<em>GitHub commit count history graph</em></p>
+<p>Less  lines and subtle cues, markers seemingly secondary and only there to  assist; all reducing the clutter. Github knows its audience is at the  page for the trends, and they (the users) don’t expect too many guides.  It knows that on the web, rather than trying to find the exact value by  visually aligning points with a verbose axis, they would prefer to hover  to know the exact data when needed with tooltips.</p>
+<p>All that resonated just too well with us, and was our first cue to begin.</p>
+<h2 id="implementation">Implementation</h2>
+<p>We  decided to focus on the essentials needed to get the ball rolling. I  began throwing together some SVG rectangles and lines to come up with a  bar graph.</p>
+<p><img src="4.png" alt="Charting: Stage 1">
+<em>Charting: Stage 1</em></p>
+<p>At this point, the only interesting thing it did was finding the Y
+intervals from the value range and figuring out a good bar width. The
+API needed to get this one going was simple:</p>
+<p><img src="/assets/imgs/2017-11-11-svg-charts-from-scratch/5.png" alt="api"></p>
+<p>In the meantime for our use case, we realised that line graphs were much
+better at showing trends, so I added it as an alternative mode. Now,
+aside from the data points, there was a single entity, the <em>path,</em> for the entire graph.</p>
+<p><img src="6.png" alt="Elastic-linked balls on rods? …">
+<em>Elastic-linked balls on rods? …</em></p>
+<p>Updating  values on the chart or any interaction was an opportunity to animate.  Animations, besides being cool, are one of those things that inherently  need you to write modular code. So in case they weren’t already, all the  individual pieces needed to be taken apart:</p>
+<blockquote>
+<p>“Oh  you want to move that thing around? Too bad you won’t be able to do it  with all those strings attached; you’d have to drag it out as a thing  unto itself first.”</p>
+</blockquote>
+<p>which is great for UI development.</p>
+<p>Data  points were easier to do it, but I knew that I’d later on have to  gracefully animate axis lines as well (while making them appear and  disappear depending on whether there were more or less) if there were  changes in the range.</p>
+<p><img src="7.gif" alt="… Yep">
+<em>… Yep</em></p>
+<p><img src="8.png" alt="The GitHub inspired translucent tooltips deserve a special mention.">
+<em>The GitHub inspired translucent tooltips deserve a special mention.</em></p>
+<p>We had use cases of pies as well, but I could simply just go with something much simpler and space-efficient.</p>
+<p><img src="9.png" alt="GitHub’s language chart: Parts of a whole, does the job">
+<em>GitHub’s language chart: Parts of a whole, does the job</em></p>
+<p><img src="10.png" alt="Our percentage chart">
+<em>Our percentage chart</em></p>
+<p>The only thing that still needed <a href="https://d3js.org/?source=post_page---------------------------">d3.js</a> was our annual heatmap, and <a href="https://github.com/wa0x6e/cal-heatmap/blob/master/src/cal-heatmap.js?source=post_page---------------------------">cal-heatmap</a>,
+the library we used for it, was an all in one package. As this one was
+quite static, and I decided to keep discrete and continuous options.</p>
+<p><img src="11.png" alt="Traditional Calendar (discrete) view">
+<em>Traditional Calendar (discrete) view</em></p>
+<p><img src="12.png" alt="Continuous (like GitHub’s contribution graph)">
+<em>Continuous (like GitHub’s contribution graph)</em></p>
+<p>That led us to obviate three of our dependencies, reducing the codebase
+by over 330kb. And now we had some decent, responsive stuff and started
+using them in ERPNext.</p>
+<p><img src="13.gif" alt="First batch">
+<em>First batch</em></p>
+<p><img src="14.gif" alt="Feeling right at home in our reports">
+<em>Feeling right at home in our reports</em></p>
+<h2 id="the-path-to-zero-dependency">The Path to Zero-dependency</h2>
+<p>While  the features had piled up, I had inadvertently dragged in two of the  most goto standards for DOM manipulations and animations: jQuery and the  <a href="http://snapsvg.io/?source=post_page---------------------------">Snap API</a>.  Both of them are fantastic projects and great at what they do, but it  would be nice if I could turn the charts into a library in the future,  so I wanted the project to stay lightweight. Fortunately, it wasn’t too  difficult to figure out life without them. There are several javascript  libraries that are built with no dependencies to dive into the codebase  of, and places like <a href="http://youmightnotneedjquery.com/?source=post_page---------------------------"><em>you might not need jquery</em></a>  were a great resource to handle the basics in pure JS. For example, the  SVG element attributes are convenient enough, and a writing a simple  function that handled setting those could actually result in better  control:</p>
+<p><img src="15.png" alt="Snap vs. custom">
+<em>Snap vs. custom</em></p>
+<p>Another  round of focussed purging got those removed, and the code now ran free  from any external dependencies. I could fire it up in a browser and  everything would just work.</p>
+<p>Well, except the animations.</p>
+<p>CSS3  is convenient for translations, but actual shape morphing (like for the  paths) is trickier for a conventional approach, and there aren’t many <a href="https://css-tricks.com/smil-is-dead-long-live-smil-a-guide-to-alternatives-to-smil-features/?source=post_page---------------------------#article-header-id-3">good alternatives</a>. I discovered <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/animate?source=post_page---------------------------">SMIL</a>  as the sole contender with decent support, that could morph paths with  equal points, with finer control over easing with beziers. An absolute  bare-bones approach would be to figure out intermediate attribute values  for the best route from one to the next, mapped with respect to the  easing function and rendered with time; an interesting future project.</p>
+<h2 id="getting-it-all-out-the-door">Getting it all out the door</h2>
+<p>While  they were used in ERPNext with real data, I had the chance to break  many of the initial assumptions with edge cases (too many points,  negative values and such) and program for more generic inputs. Once they  seemed stable enough, I went on to set them up as a separate repository  and began packaging.</p>
+<p>I realized that designing the landing page would actually take quite some time, and decided to actually do it <em>before</em>  completing the project. The page would demonstate the use of the  library, so if possible, I wanted real use cases to drive what the  library could do, rather than the page to be driven by what the library  had. I went ahead and placed all the buttons I’d like to see, whether or  not their function was possible at the time. Thinking from the point of  view of an onlooker made me radically rethink the features.</p>
+<p><img src="16.png" alt="Of course we need to be able do these, right?">
+<em>Of course we need to be able do these, right?</em></p>
+<p>With those in place, I went ahead and programmed in the functions that
+were missing. Like physical laws, every new step revealed a bit more of
+the underlying structure and gave a chance for cleaning up. For
+instance, for adding and removing values, updating values had to be
+upgraded to take in a different number of points than the current set. I
+also tried to let the user have more control over the rendering, but in
+a way that keeps the design consistent.</p>
+<p><img src="17.png" alt="Trends chart">
+<em>A Trends Chart: That’s just a line chart with many values, no data dots,
+series-skipped X values, horizontal instead of vertical lines and a
+gradient instead of solid color, all hackable through the API</em></p>
+<p>Finally  all seemed well, and we went ahead and released them out into the wild.  We have been fortunate enough to receive an amazing response from the  open source community over a short span of time, and got to be a part of  many interesting <a href="https://news.ycombinator.com/item?id=15594004&amp;source=post_page---------------------------">discussions</a>. We’ve also had some [awesome contributions](<a href="https://github.com/frappe/charts/pulls?q=is%3Apr">https://github.com/frappe/charts/pulls?q=is%3Apr</a> is%3Aclosed&amp;source=post_page&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;) (including a pie chart!) and <a href="https://github.com/frappe/charts/issues?source=post_page---------------------------">ideas</a>  for more features. There’s still plenty of room for improvement, and  I’ll continue working to make them better, following which we’ll look  forward to release the next upgrade to features. Be sure to keep a  lookout for what Frappé comes up with next!</p>
+<hr>
+<p><a href="http://frappe.io/charts?source=post_page---------------------------"><em>Frappé Charts</em></a> <em>are on</em> <a href="https://github.com/frappe/charts?source=post_page---------------------------"><em>GitHub</em></a><em>. Give them a spin and let us know what you think; we’d love to hear your feedback :)</em></p>
+<p><em>P.S.:  This is my first library, and I am grateful to everyone at Frappé for  the opportunity and support to work on it (Is this what they call R&amp;D? ;) )</em></p></div>
+</article>
+
+        
+        <footer>© Prateeksha Singh 2020</footer>
+    </body>
+</html>

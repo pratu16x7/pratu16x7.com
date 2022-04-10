@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{.Title}}</title>
+        {{ $style := resources.Get "/sass/main.scss" | toCSS | minify | fingerprint }}
+        <!-- using Permalink (absolute path) here will cause the Mixed content error and fail to load -->
+        <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+        <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
+        <!-- feed_meta
+         seo    -->
+    </head>
+    <body>
+        {{ partial "menu" . }}
+
+        <h1>404</h1>
+        
+        <em>“Goodday to you! This lane don’t lead anywhere, and wherever you may be going, your quickest way will be back to the road."</em>
+        - Farmer Maggot
+        
+        <footer>© Prateeksha Singh 2020</footer>
+    </body>
+</html>

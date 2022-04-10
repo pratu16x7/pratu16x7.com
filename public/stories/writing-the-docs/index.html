@@ -1,0 +1,161 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Writing The Docs</title>
+        
+        
+        <link rel="stylesheet" href="/sass/main.min.63ba10e1e37b242c9329126bc7151844317a83c4575a9e5c68204b18ec2b0c10.css">
+        <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
+        <meta property="og:title" content="Writing The Docs" />
+<meta property="og:description" content="So you’re me and you’re a software dev, and you’re faced with the ultimate task of finally getting around to writing documentation." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://pratu16x7.com/stories/writing-the-docs/" /><meta property="og:image" content="http://pratu16x7.com/stories/writing-the-docs/thumbnail.jpg"/><meta property="article:section" content="stories" />
+<meta property="article:published_time" content="2018-06-12T16:44:12+05:30" />
+<meta property="article:modified_time" content="2018-06-12T16:44:12+05:30" /><meta property="og:site_name" content="Prateeksha&#39;s Webplace" />
+
+
+        
+        
+        <meta property="og:image" content="/images/timon_minimal.png"/>
+        <meta property="og:image:secure_url" content="http://pratu16x7.com/images/timon_minimal.png"/>
+        
+        
+    </head>
+    <body>
+        
+<header>
+    <img src="/images/timon_minimal.svg" class="logo min-width-logo">
+    <nav>
+        <ul>
+            
+            
+            
+            
+                
+                <li class="">
+                    <a href="/" title=""><span>About me</span></a>
+                </li>
+            
+                
+                <li class="">
+                    <a href="/stories/" title=""><span>Stories</span></a>
+                </li>
+            
+                
+                    <li class="max-width-logo">
+                        <img src="/images/timon_minimal.svg" class="logo">
+                    </li>
+                
+                <li class="">
+                    <a href="/creations/" title=""><span>Creations</span></a>
+                </li>
+            
+                
+                <li class="">
+                    <a href="/work/" title=""><span>Work</span></a>
+                </li>
+            
+            
+        </ul>
+    </nav>
+</header>
+
+        
+        
+
+<article class="paper green">
+    <img src="map_of_the_lonely_mountain.jpeg">
+
+    <hgroup>
+        <h1>Writing The Docs</h1>
+        <h3>Venturing beyond the README</h3>
+    </hgroup>
+
+    <div style="color:grey; font-size:16px;">Tuesday, Jun 12, 2018</div>
+    <div style="color:grey; font-size:16px;"></div>
+
+
+    <div><p>So you’re me and you’re a software dev, and you’re faced with the ultimate task of finally getting around to writing documentation.</p>
+<p>You remember the time when you thought it’s not really important to document things if you write computer programs well. You would gloss over your tiny functions, and take pride in always writing readable code (as you assumed), thought-out variable names, and think surely no one will have trouble understanding what you obviously mean.</p>
+<p>Of course, you feel you’ve gotten past those delusions. <a href="https://signalvnoise.com/posts/3250-clarity-over-brevity-in-variable-and-method-names?source=post_page---------------------------">Intent of the code</a>  that makes the reader feel like having Matrix-y  see-past-the-code-vision, while necessary, isn’t sufficient. Even  leaving the end users aside, your future self too may want to come back  and make changes. You suddenly start to empathise with them and get to  work.</p>
+<p>You start with one of your independent projects to kickstart things and to get into the habit of it.</p>
+<h2 id="the-humane-way-writing">The Humane Way: Writing</h2>
+<p>To get a taste of what’s ahead, you go with your most used strategy: examples. Instead of reading on <em>how</em> to write docs, you spend hours to read up some great docs examples.</p>
+<p>You  discover that documentation is one of those technical places that  doesn’t feel mechanical. The Python Community looks like it has always  managed to be human <em>and</em> professional (despite being open source, that says a lot about discipline); <a href="http://flask.pocoo.org/?source=post_page---------------------------">Flask</a>, <a href="http://docs.python-requests.org/en/master/?source=post_page---------------------------">Requests</a>, <a href="http://docs.python-guide.org/en/latest?source=post_page---------------------------">The Hitchhiker’s Guide to Python</a> itself. Engaging writing style doesn’t even begin to describe them. The folks over at <a href="http://www.writethedocs.org/guide/writing/beginners-guide-to-docs/?source=post_page---------------------------#what-to-write">Write the Docs</a> are a great resource for how to write docs … while demonstrating it themselves. <a href="https://getbootstrap.com/docs/4.1/content/reboot/?source=post_page---------------------------">Bootstrap</a> and <a href="https://vuejs.org/v2/guide/?source=post_page---------------------------">Vue</a> are amazing projects that use use-cases to clarify the intent of their decisions. <a href="https://yarnpkg.com/en/docs?source=post_page---------------------------">Yarn</a>, on the other hand, is a good example of to-the-point reference of all it has to offer. In the realm of small utilities, <a href="http://blissfuljs.com/docs.html?source=post_page---------------------------">BlissfulJs</a> is a fresh one to capture attention on how it eases your use of native Javascript.</p>
+<p>After all that imbibing, you allow yourself some time to begin composing. To quote Mr. Holmes:</p>
+<blockquote>
+<p>A  man should be at his very best and keenest for such nice work as that,  and I did not wish to do it when fagged by [tediousness].</p>
+</blockquote>
+<p>You  imagine your README as a summary of the stuff you’d like to cover. That  means you’ve gotten things like ‘Installation’, ‘Get Started’ and  ‘Configuration’ down. So now it’s about the real meat, the API in depth.  But it’s already been too late to follow RDD and for all of <a href="https://www.kennethreitz.org/documentation-is-king/?source=post_page---------------------------">Kenneth’s talks</a>, you’re here to start them after coding stuff in.</p>
+<p>You get down a basic structure for each concept something like:</p>
+<ul>
+<li>What is it / Concept</li>
+<li>Use case / idea / what it is built upon</li>
+<li>How to use it</li>
+<li>What it does/shows [Example]</li>
+<li>Any modifications</li>
+</ul>
+<p>Out of which the technical bits from usage to modifications are easy enough:</p>
+<p><img src="trends_docs_1.png" alt="Trends chart docs examples"></p>
+<p>But the explanation you write turns out to be a … well …</p>
+<p><img src="trends_docs_2.png" alt="Trends chart docs explanation 1">
+<em>Ya don’t say.</em></p>
+<p><a href="https://signalvnoise.com/posts/454-why-most-copywriting-on-the-web-sucks?source=post_page---------------------------">Hmm.</a></p>
+<p>Just listing each idea this way reminds you of the index at the back of the book, useful in a cheatsheet way. In fact, you <em>have</em> seen a section in the docs that incorporates these: it’s called an <em>API reference</em>. There must be a reason they’re called a reference.</p>
+<p>The full-fledged explanation though, looks like it lacks motivation.</p>
+<p>Instead, you try and write it with some context:</p>
+<p><img src="trends_docs_3.png" alt="Trends chart docs explanation 2"></p>
+<p>Progress!</p>
+<p>As you document more and more stuff, you’ve started to like <em>redundancy</em>,  linking docs all over with property keywords and “as we have seen’s”.  In fact, you even add a couple of other optional items to the list:</p>
+<ul>
+<li>Relations</li>
+<li>Gotchas</li>
+</ul>
+<p>And while you’re at it, you decide to show them stuff they’ll actually use:
+forget list outs, we’re here for the stuff we can do.</p>
+<p><img src="stacked_bars.png" alt="Stacked Bars">
+<em>[Solved][Feature Request] Stacked Bar Charts</em></p>
+<h2 id="the-medium-markdown">The Medium: Markdown</h2>
+<p>You  decide that content needs a simple medium in plain text, even though  all of it has to be converted to HTML in the end. While writing plain  HTML is great — after all, HTML has evolved to give meaning to content —  you still feel it’s the stage I of reducing complexity. Markdown looks  like one such option, with minimum notations to decide the semantics, so  that your text is easily translatable to HTML. Also, given that most of  the existing documentation of your system exists in markdown, it makes  it a consistent choice.</p>
+<p><img src="markdown.png" alt="Markdown Awesomeness"></p>
+<h2 id="the-interactivity-demos">The Interactivity: Demos</h2>
+<p>You  feel you’ve made a fantastic choice to put in a CodePen demo on the  landing page. Unfortunately, that makes you get bored soon with your  static examples. They sure are indispensable to get your point across.  But you remember being blown away by a website that taught you <a href="https://jgthms.com/web-design-in-4-minutes/?source=post_page---------------------------">web design in 4 minutes</a>, that engaged you while showing you the instant effect of certain actions.</p>
+<p>Since your medium is the web, you’d like to make things more interesting than the back of a cereal box.</p>
+<p>So you go ahead and add this:</p>
+<p><img src="demo_1.gif" alt="Demos in docs"></p>
+<p>Given  the sheer number of demos you’d have to create, you only wish you had  something that rolls out a demo with the desired configuration.</p>
+<p>Fortunately, your project is from the remarkable species of JavaScript libs, that is used as:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">new</span> <span style="color:#a6e22e">LibObj</span> (<span style="color:#a6e22e">parent</span>, <span style="color:#a6e22e">options</span>)
+</code></pre></div><p>and most of the options are primitive values. It doesn’t take much code
+to come up with something that given an option type and values, creates a
+control to take input and creates an object with the value passed.
+Moreover, it can also have actions:</p>
+<p><img src="demo_2.gif" alt="Demos on Home page"></p>
+<p>Only,  this leaves you with a dilemma about the location of storing the demo  configuration. The whole point is to keep .md files static, so simply  having the config where the demo would be in the markdown itself is a  fantasy.</p>
+<p>Or is it?</p>
+<p>After all, configuration itself is static. You discover <a href="https://vuejs.org/v2/guide/components.html?source=post_page---------------------------">Vue components</a> (incidentally, one of the <a href="https://vuejs.org/v2/guide/?source=post_page---------------------------">most heavenly examples of docs</a> you’ve ever read), that allow custom configured elements in HTML. And as Vue allows for <a href="https://vuejs.org/v2/api/?source=post_page---------------------------#vm-mount">deferred mounting</a>, it is easy enough to include it in any post process of your documentation generator.</p>
+<p>With some effort, you’re able to come up with this:</p>
+<p><img src="demos_in_markdown.png" alt="Demos in markdown">
+<em>Demos in markdown: the combo that for one wild moment makes you feel you’ve reached the pinnacle of configuration over code. O Holy.</em></p>
+<p>You almost feel like this is something markdown should have by default, but think better (or worse) of it.</p>
+<p>Hurray for interactivity! But when you try it with the remaining values it … fails?</p>
+<p>All this demoing is leading you to bugs you didn’t even know you had. Integration testing, yay.</p>
+<h2 id="the-framework-maintainability">The Framework: Maintainability</h2>
+<p>So  far your goal has been to keep docs themselves as portable as possible.  The next step is the future case of bootstrapping a documentation  framework. After going through an <a href="https://news.ycombinator.com/item?id=11164013&amp;source=post_page---------------------------">old thread</a>, you decide to explore some of the widely used options today.</p>
+<p>Three things are on your mind the most: Pre-rendering, search, and layout modification.</p>
+<p>You’ve had some experience with <a href="https://docs.gitbook.com/?source=post_page---------------------------">GitBook</a> and Docsify. GitBook  has for long been the professional choice, which means it has a slew of  features, but also limited options to customise the standard layout  decisions.</p>
+<p><a href="https://docsify.js.org/?source=post_page---------------------------#/">Docsify</a>  is a more take-apart project, has no statically generated HTML files,  which while making it lightweight, compromises overall SEO. But for  simple projects, it is a great option with regards to customizability  with plugins and layouts (The community has been considerate enough to  release <a href="https://docsify.js.org/?source=post_page---------------------------#/plugins?id=list-of-plugins">many add-ons</a> that people might need while writing docs).</p>
+<p>GitBook and <a href="https://vuepress.vuejs.org/guide/?source=post_page---------------------------#how-it-works">Vuepress</a> being large-scale projects, have the Algolia search API usage built-in, making it easier to incorporate indexed search.</p>
+<p>Vuepress aims to <a href="https://vuepress.vuejs.org/guide/?source=post_page---------------------------#why-not">alleviate</a>  most of the issues in the above. However, being a relatively new  project, some of the features are still in development. Yet, its  gameplan looks promising if one wishes to design and customize a system  that suits plenty of existing and forthcoming projects.</p>
+<h2 id="release-the-beginning">Release: The Beginning</h2>
+<p>Of  course, after the first write-through, things still look messy. But now  you have wood to work on, some protocols that’ll help you add things  and maintain better. You’ve started to like it, to sleep better, and  wonder how the project managed to survive until now without it.</p>
+<p>You  realise that it makes little sense to berate people for not being  motivated enough to read the source code; the ultimate holy grail of  developers is to communicate their work to other <em>makers</em>,  whose work may or may not involve programming itself. That’s the  wonderful thing about code, the highly accessible (when made so!) form  of tinkering, that permeates all walks of life.</p>
+<p>You publish out the docs, hoping that your users end up understanding a lot more about the project than you ever did.</p>
+<p><em>The result, as the first draft:</em> <a href="https://frappe.io/charts?source=post_page---------------------------"><em>https://frappe.io/charts</em></a></p>
+<p><em>Thank you</em> <a href="https://www.youtube.com/watch?v=ahXIMUkSXX0&amp;source=post_page---------------------------"><em>Vihart</em></a>  <em>for being an inspiration for the narration style. And for programming,  math, drawing, music, presentation … strike that, almost everything.  You’re diabolically awesome.</em></p></div>
+</article>
+
+        
+        <footer>© Prateeksha Singh 2020</footer>
+    </body>
+</html>
